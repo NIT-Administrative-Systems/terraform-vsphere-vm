@@ -123,7 +123,7 @@ variable "cpu_reservation" {
 
 variable "ram_size" {
   description = "VM RAM size in megabytes."
-  default     = 4096
+  default     = {}
 }
 
 variable "dc" {
@@ -217,13 +217,13 @@ variable "cpu_hot_add_enabled" {
 variable "cpu_hot_remove_enabled" {
   description = "Allow CPUs to be removed to this virtual machine while it is running."
   type        = bool
-  default     = null
+  default     = true
 }
 
 variable "memory_hot_add_enabled" {
   description = "Allow memory to be added to this virtual machine while it is running."
   type        = bool
-  default     = null
+  default     = true
 }
 
 variable "memory_reservation" {
@@ -241,7 +241,7 @@ variable "hw_clock_utc" {
 
 variable "vmdomain" {
   description = "default VM domain for linux guest customization."
-  default     = "Development.com"
+  default     = "itcs.private"
 }
 
 
